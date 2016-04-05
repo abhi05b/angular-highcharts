@@ -1,0 +1,31 @@
+{
+  "name": "maps-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build-js && node server.js",
+    "watch-js": "watchify index.js -o bundle.js -dv",
+    "watch": "npm run watch-js",
+    "build-js": "browserify scripts/index.js > scripts/dist/bundle.js",
+    "build": "npm run build-js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-material": "^1.0.6",
+    "angular-messages": "^1.5.3",
+    "angular-ui-bootstrap": "^1.2.5",
+    "browserify": "^13.0.0",
+    "csv-parse": "^1.0.2",
+    "csvtojson": "^0.5.3",
+    "express": "^4.13.4",
+    "highcharts": "^4.2.3",
+    "jquery": "^2.2.2",
+    "lodash": "^4.6.1",
+    "proj4": "^2.3.14"
+  }
+}

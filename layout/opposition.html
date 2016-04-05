@@ -1,0 +1,56 @@
+<section id="portfolio">
+	<div class="container-fluid"   ng-controller="OppositionStatController" >
+	<div class="container filterBar">
+	<div class="col-sm-offset-2 col-md-offset-4 col-md-8 pad">
+	<div class="col-md-3">
+	<p >Choose Criteria:</p>
+	<div class="btn-group" uib-dropdown>
+			
+            <button ng-init="criteria='Total Runs'"id="btn-append-to-single-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+              {{criteria}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+              <li role="menuitem"><a ng-click="criteria='Total Runs';changeTeamCriteria('totalRuns', 'Total Runs')">Total Runs</a></li>
+              <li role="menuitem"><a ng-click="criteria='100s';changeTeamCriteria('hundreds','100s')">100s</a></li>
+              <li role="menuitem"><a ng-click="criteria='50s';changeTeamCriteria('fifties','50s')">50s</a></li>
+               <li role="menuitem"><a ng-click="criteria='Win %';changeTeamCriteria('winPercent','Win %')">Win %</a></li>
+              
+            </ul>
+          </div>
+		  </div>
+		  <div class="col-md-4">
+	<p>Choose Graph Type:</p>
+	<div class="btn-group" uib-dropdown>
+			
+            <button ng-init="graphType='Map'" id="btn-append-to-single-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+              {{graphType}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+              <li role="menuitem"><a ng-click="graphType='Map'">Map</a></li>
+              <li role="menuitem"><a ng-click="graphType='Bar'">Bar</a></li>
+            </ul>
+          </div>
+		  </div>
+		  </div>
+	</div>
+	
+	<div class="col-md-8" class="md-padding" ng-cloak style="min-height:270px">
+	
+
+  <div class="container">
+  	<div>
+  	<div class="col-md-offset-1" ng-show="graphType==='Map'" class="row" id="container">
+	</div>
+	<div class="col-md-offset-1" ng-show="graphType==='Bar'" class="row" id="barGraph">
+	</div>
+	</div>
+	</div>
+</div>
+
+	</div>
+	
+		
+		
+		
+
+    </section>
